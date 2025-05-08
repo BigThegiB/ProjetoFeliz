@@ -1,0 +1,16 @@
+PImage Caixa;
+PImage Isopor;
+PImage Detergente;
+PImage GarrafaVidro1;
+PImage GarrafaVidro2;
+PImage Garrafa;
+PImage Jornal;
+PImage LataGrande;
+PImage LataPequena;
+PImage LataRefri;
+PImage Leite;
+PImage Mug;
+PImage Pizza;
+PImage PoteVidro;
+PImage Pressurizada;
+PImage Saco;
