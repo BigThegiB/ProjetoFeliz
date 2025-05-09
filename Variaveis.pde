@@ -15,9 +15,10 @@
 //PImage Pressurizada;
 //PImage Saco;
 boolean ReciclavelSpawned = false;
-String[] Metal = {"LataPequena","LataGrande","LataRefri"};
-String[] Vidro = {"GarrafaVidro1","GarrafaVidro2","PoteVidro"};
-String[] Papel = {"Caixa","Jornal","Saco"};
-String[] Plastico = {"Garrafa","Leite","Detergente"};
-String[] Outros = {"Isopor", "Mug", "Pizza", "Pressurizada"};
-String[][] Todas = {Metal, Vidro, Papel, Plastico, Outros};
+boolean Reciclavel1Completed = false;
+ArrayList<String> Metal = new ArrayList<String>(Arrays.asList("LataPequena", "LataGrande", "LataRefri"));
+ArrayList<String> Vidro = new ArrayList<String>(Arrays.asList("GarrafaVidro1", "GarrafaVidro2", "PoteVidro"));
+ArrayList<String> Papel = new ArrayList<String>(Arrays.asList("Caixa", "Jornal", "Saco"));
+ArrayList<String> Plastico = new ArrayList<String>(Arrays.asList("Garrafa", "Leite", "Detergente"));
+ArrayList<String> Outros = new ArrayList<String>(Arrays.asList("Isopor", "Mug", "Pizza", "Pressurizada"));
+ArrayList<ArrayList<String>> Todas = new ArrayList<ArrayList<String>>();
