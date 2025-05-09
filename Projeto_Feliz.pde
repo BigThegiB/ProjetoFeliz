@@ -3,4 +3,5 @@ void setup() {
   EscolherItem();
 }
 void draw() {
+  SpawnarItem(width*0.4, height*0.7);
 }
