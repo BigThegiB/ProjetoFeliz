@@ -1,7 +1,6 @@
-void setup(){
-size(1000,1000);
-Reciclaveis();
+void setup() {
+  size(1000, 1000);
+  EscolherItem();
 }
-  
-void draw(){
-  
+void draw() {
+}

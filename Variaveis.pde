@@ -14,3 +14,10 @@ PImage Pizza;
 PImage PoteVidro;
 PImage Pressurizada;
 PImage Saco;
+
+String[] Metal = {"LataPequena","LataGrande","LataRefri"};
+String[] Vidro = {"GarrafaVidro1","GarrafaVidro2","PoteVidro"};
+String[] Papel = {"Caixa","Jornal","Saco"};
+String[] Plastico = {"Garrafa","Leite","Detergente"};
+String[] Outros = {"Isopor", "Mug", "Pizza", "Pressurizada"};
+String[][] Todas = {Metal, Vidro, Papel, Plastico, Outros};
