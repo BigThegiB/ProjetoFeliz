@@ -1,5 +1,5 @@
 void setup() {
-  size(1000, 1000);
+  size(800, 800);
   Todas.add(Metal);
   Todas.add(Vidro);
   Todas.add(Papel);
