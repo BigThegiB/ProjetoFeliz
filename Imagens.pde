@@ -5,4 +5,5 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   LixoPlastico = loadImage("LixoPlastico.png");
   LixoVidro = loadImage("LixoVidro.png");
   Puff = createFont("DynaPuff-SemiBold.ttf", 64);
+  TestWin = loadImage("TestWin.png");
 }

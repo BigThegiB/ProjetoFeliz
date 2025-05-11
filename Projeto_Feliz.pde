@@ -4,10 +4,15 @@ void setup() { //<>//
   CarregarImagens();
 }
 void draw() {
-textFont(Puff);
-textSize(50);
-text("The quick brown fox jumps over the lazy dog", 250, 400, 400,500);
-
+  if (Reciclagem1) { // Variavel para fazer o codigo inteiro rodar, só fazer o menu ativar ela e a magica vai acontecer (se possivel fazer o menu nn renderizar quando ela ta ativa)
+    if (!Reciclagem1Completed) {
+      background(#FFFFFF);
+      ReciclavelGameplay();
+    } else {
+      background(TestWin);
+    }
+  }
+}
 void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb
   if (Reciclagem1) {
     ReciclagemClickSolto();

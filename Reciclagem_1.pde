@@ -18,6 +18,7 @@ PImage EscolherItem() {
     if (Escolhida.isEmpty()) {
       Todas.remove(iLista);
     }
+    TipoDoItem = ReciclavelNome;
     return ItemReciclavel;
   }
 }
@@ -25,16 +26,37 @@ PImage EscolherItem() {
 
 PImage LoadItem(PImage OldItem) {
   if (ReciclavelSpawned == false && !Todas.isEmpty()) {
-  ItemReciclavel = EscolherItem();
-  return ItemReciclavel;}
-  else
-  return OldItem;
-  
-
+    ItemReciclavel = EscolherItem();
+    ReciclavelSpawned = true;
+    return ItemReciclavel;
+  } else
+    return OldItem;
 }
-void ReciclagemClickSolto(){
- if (TrashInMouse){
-  TrashInMouse = false;
+void ReciclagemClickSolto() {
+  ArrayList<String> MetalCheck = new ArrayList<String>(Arrays.asList("LataPequena", "LataGrande", "LataRefri"));
+  ArrayList<String> VidroCheck = new ArrayList<String>(Arrays.asList("GarrafaVidro1", "GarrafaVidro2", "PoteVidro"));
+  ArrayList<String> PapelCheck = new ArrayList<String>(Arrays.asList("Caixa", "Jornal", "Saco"));
+  ArrayList<String> PlasticoCheck = new ArrayList<String>(Arrays.asList("garrafa", "Leite", "Detergente"));
+  ArrayList<String> OutrosCheck = new ArrayList<String>(Arrays.asList("CopoIsopor", "Mug", "Pizza", "Pressurizada"));
+  if (TrashInMouse) {
+    TrashInMouse = false;
+  }
+  if (MouseClick(width*0.1f, width*0.1+105f, height*0.3125f, height*0.3125+165f) && MetalCheck.contains(TipoDoItem)) {
+    ReciclavelSpawned = false;
+  }
+
+
+  if (MouseClick(width*0.26625f, width*0.26625+105f, height*0.3125f, height*0.3125+165f) && PapelCheck.contains(TipoDoItem)) {
+    ReciclavelSpawned = false;
+  }
+  if (MouseClick(width*0.434375f, width*0.434375+105f, height*0.3125f, height*0.3125+165f) && PlasticoCheck.contains(TipoDoItem)) {
+    ReciclavelSpawned = false;
+  }
+  if (MouseClick(width*0.6f, width*0.6+105f, height*0.3125f, height*0.3125+165f) && VidroCheck.contains(TipoDoItem)) {
+    ReciclavelSpawned = false;
+  }
+  if (MouseClick(width*0.76625f, width*0.76625+105f, height*0.3125f, height*0.3125+165f) && OutrosCheck.contains(TipoDoItem)) {
+    ReciclavelSpawned = false;
   }
 }
 
@@ -42,15 +64,15 @@ void ReciclagemClickSolto(){
 
 void ReciclavelGameplay() {
   Reciclagem1 = true;
+
   image(LixoMetal, width * 0.1, height * 0.3125, 105, 165);
   image(LixoPapel, width * 0.26625, height * 0.3125, 105, 165);
   image(LixoPlastico, width * 0.434375, height * 0.3125, 105, 165);
   image(LixoVidro, width * 0.6, height * 0.3125, 105, 165);
   image(LixoOrganico, width * 0.76625, height * 0.3125, 105, 165);
   LoadItem(ItemReciclavel);
-  ReciclavelSpawned = true;
-  if (ItemReciclavel == null) {
-    Reciclavel1Completed = true;
+  if (Todas.isEmpty() && !ReciclavelSpawned) {
+    Reciclagem1Completed = true;
   }
   float ReciclavelX = width * 0.42;
   float ReciclavelY = height * 0.7;
@@ -63,7 +85,6 @@ void ReciclavelGameplay() {
   }
 
   image(ItemReciclavel, ReciclavelX, ReciclavelY, 64*2, 64*2);
-  println(ReciclavelSpawned, ReciclavelX, ReciclavelY);
 }
 
 
