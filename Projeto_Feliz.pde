@@ -1,17 +1,15 @@
-void setup() {
-  size(1000, 1000);
-  Todas.add(Metal);
-  Todas.add(Vidro);
-  Todas.add(Papel);
-  Todas.add(Plastico);
-  Todas.add(Outros);
-  Puff = createFont("DynaPuff-SemiBold.ttf", 64);
+void setup() { //<>//
+  size(800, 800);
+  TodasAdd(); // Favor não tirar
+  CarregarImagens();
 }
 void draw() {
-  if(mousePressed && !Reciclavel1Completed){
-  SpawnarItem(width*0.4, height*0.7);
-ReciclavelSpawned = false;}
 textFont(Puff);
 textSize(50);
 text("The quick brown fox jumps over the lazy dog", 250, 400, 400,500);
+
+void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb
+  if (Reciclagem1) {
+    ReciclagemClickSolto();
+  }
 }
