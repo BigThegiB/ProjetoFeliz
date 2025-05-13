@@ -1,4 +1,4 @@
-boolean Reciclagem1 = true;
+boolean Reciclagem1 = false;
 boolean ReciclavelSpawned = false;
 boolean Reciclagem1Completed = false;
 ArrayList<String> Metal = new ArrayList<String>(Arrays.asList("LataPequena", "LataGrande", "LataRefri"));
@@ -20,10 +20,10 @@ PImage TestWin;
 
 //-----------------
 
-boolean brinquedos = false;
+boolean brinquedos = true;
 PImage[] imagens = new PImage[4];
-int[] posX = {100, 400, 100, 400};
-int[] posY = {100, 100, 400, 400};
+int[] posX = {40, 460, 40, 460};
+int[] posY = {40, 40, 460, 460};
 int[] larguras = new int[4];
 int[] alturas = new int[4];
 PImage fundo;
