@@ -16,7 +16,7 @@ PImage LixoPlastico;
 PImage LixoVidro;
 boolean TrashInMouse = false;
 PImage ItemReciclavel;
-PImage TestWin;
+PImage TestWin
 
 //-----------------
 
@@ -29,3 +29,4 @@ int[] alturas = new int[4];
 PImage fundo;
 
 //-----------------
+
