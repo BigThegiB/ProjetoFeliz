@@ -21,3 +21,10 @@ void AlturaLargura() {
   alturas[i] = imagens[i].height;
   }
 }
+
+void texto() {
+  textFont(Puff);
+  text("Vamos", 290, 300);
+  text("montar um", 220, 400);
+  text("brinquedo?", 230, 500);
+}
