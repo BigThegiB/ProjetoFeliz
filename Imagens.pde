@@ -11,4 +11,18 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   imagens[2] = loadImage("Img3.png");
   imagens[3] = loadImage("Img4.png");
   fundo = loadImage("background1.0.png");
+  imgBotao1 = loadImage("imagem_botao1.jpg");
+  imgBotao2 = loadImage("imagem_botao2.jpg");
+  imgBotao3 = loadImage("imagem_botao3.jpg");
+
+  botao1X = xInicial;
+  botao1Y = yComumParaBotoes;
+
+  botao2X = botao1X + botaoLargura + espacamentoHorizontal;
+  botao2Y = yComumParaBotoes;
+
+  botao3X = botao2X + botaoLargura + espacamentoHorizontal;
+  botao3Y = yComumParaBotoes;
+    smooth();
+
 }

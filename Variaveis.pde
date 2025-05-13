@@ -29,3 +29,22 @@ int[] alturas = new int[4];
 PImage fundo;
 
 //-----------------
+boolean Menu = true;
+int svar = 1;
+PImage imgBotao1;
+PImage imgBotao2;
+PImage imgBotao3;
+
+
+int botao1X, botao1Y;
+int botaoLargura = 200;
+int botaoAltura = 200;
+int botao2X, botao2Y;
+int botao3X, botao3Y;
+
+  int espacamentoHorizontal = 50; 
+  int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
+  int xInicial = 50;
+  int yComumParaBotoes = 250;
+
+  
