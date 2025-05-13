@@ -13,6 +13,7 @@ void draw() {
   mostrar();
   AlturaLargura();
   texto();
+  BotaoBrinquedo();
   }
   
   if (Reciclagem1) { // Variavel para fazer o codigo inteiro rodar, só fazer o menu ativar ela e a magica vai acontecer (se possivel fazer o menu nn renderizar quando ela ta ativa)
@@ -21,7 +22,7 @@ void draw() {
       ReciclavelGameplay();
     } else {
       background(TestWin);
-      delay(300);
+      delay(3000);
       Menu = true;
       delay(300);
       Reciclagem1=false;

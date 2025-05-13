@@ -20,9 +20,9 @@ PImage TestWin;
 
 //-----------------
 
-boolean brinquedos = true;
+boolean brinquedos = false;
 PImage[] imagens = new PImage[4];
-int[] posX = {40, 460, 40, 460};
+int[] posX = {40, 460, 40, 480};
 int[] posY = {40, 40, 460, 460};
 int[] larguras = new int[4];
 int[] alturas = new int[4];

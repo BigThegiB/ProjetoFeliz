@@ -4,7 +4,7 @@ color corBordaBotaoHover = color(0, 0, 200);
 
  
 void botoes() {
-  background(240, 240, 240);
+  background(fundo);
 
 
   desenharBotaoComImagem(botao1X, botao1Y, botaoLargura, botaoAltura, imgBotao1);
@@ -58,16 +58,16 @@ void desenharBotaoComImagem(int x, int y, int w, int h, PImage img) {
 void ClickMenu(){
 if(mousePressed) {
   // Verificar se o clique foi dentro do Botão 1
- if (MouseClick(botao1X,botao1X+botaoLargura,botao1Y,botao1Y+botaoAltura)){brinquedos = true;}
+ if (MouseClick(botao1X,botao1X+botaoLargura,botao1Y,botao1Y+botaoAltura)){brinquedos = true; Menu = false;}
     
   
     println("Botão com imagem 1 foi clicado!");
   
   // Verificar se o clique foi dentro do Botão 2
-  if (MouseClick(botao2X,botao2X+botaoLargura,botao2Y,botao2Y+botaoAltura)){Reciclagem1 = true;}
+  if (MouseClick(botao2X,botao2X+botaoLargura,botao2Y,botao2Y+botaoAltura)){Reciclagem1 = true;Menu = false;}
     println("Botão com imagem 2 foi clicado!");
   //// Verificar se o clique foi dentro do Botão 3
-  //if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){glaucia = true;}
+  //if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){glaucia = true;Menu = false}
   
     println("Botão com imagem 3 foi clicado!");
     if (MouseClick(0, 100, 0, 40)){Menu = true;}
