@@ -4,6 +4,10 @@ void setup() {
   CarregarImagens();
 }
 void draw() {
+  if(Menu){  botoes();
+ ClickMenu();}
+  
+  
   if (brinquedos) {
   background(fundo);
   mostrar();
@@ -16,6 +20,10 @@ void draw() {
       ReciclavelGameplay();
     } else {
       background(TestWin);
+      delay(300);
+      Menu = true;
+      delay(300);
+      Reciclagem1=false;
     }
   }
 }
