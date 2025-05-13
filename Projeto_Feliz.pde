@@ -1,17 +1,29 @@
-void setup() {
+void setup() { //<>//
   size(800, 800);
-  Todas.add(Metal);
-  Todas.add(Vidro);
-  Todas.add(Papel);
-  Todas.add(Plastico);
-  Todas.add(Outros);
-  Puff = createFont("DynaPuff-SemiBold.ttf", 64);
+  TodasAdd(); // Favor não tirar
+  CarregarImagens();
 }
 void draw() {
-  if(mousePressed && !Reciclavel1Completed){
-  SpawnarItem(width*0.4, height*0.7);
-ReciclavelSpawned = false;}
-textFont(Puff);
-textSize(50);
-text("The quick brown fox jumps over the lazy dog", 250, 400, 400,500);
+  if (brinquedos) {
+  background(fundo);
+  mostrar();
+  AlturaLargura();
+  }
+  
+  if (Reciclagem1) { // Variavel para fazer o codigo inteiro rodar, só fazer o menu ativar ela e a magica vai acontecer (se possivel fazer o menu nn renderizar quando ela ta ativa)
+    if (!Reciclagem1Completed) {
+      background(fundo);
+      ReciclavelGameplay();
+    } else {
+      background(TestWin);
+    }
+  }
+}
+void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb
+  if (Reciclagem1) {
+    ReciclagemClickSolto();
+  }
+  if (brinquedos) {
+  escolherBrinquedo();
+  }
 }
