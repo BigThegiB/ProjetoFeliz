@@ -10,7 +10,7 @@ ArrayList<ArrayList<String>> Todas = new ArrayList<ArrayList<String>>();
 String TipoDoItem = "";
 PFont Puff;
 PImage LixoMetal;
-PImage LixoOrganico;
+PImage LixoNao;
 PImage LixoPapel;
 PImage LixoPlastico;
 PImage LixoVidro;

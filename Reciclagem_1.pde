@@ -69,7 +69,7 @@ void ReciclavelGameplay() {
   image(LixoPapel, width * 0.26625, height * 0.3125, 105, 165);
   image(LixoPlastico, width * 0.434375, height * 0.3125, 105, 165);
   image(LixoVidro, width * 0.6, height * 0.3125, 105, 165);
-  image(LixoOrganico, width * 0.76625, height * 0.3125, 105, 165);
+  image(LixoNao, width * 0.76625, height * 0.3125, 105, 165);
   LoadItem(ItemReciclavel);
   if (Todas.isEmpty() && !ReciclavelSpawned) {
     Reciclagem1Completed = true;
