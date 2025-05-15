@@ -34,7 +34,14 @@ void BotaoBrinquedo() {
   fill(#5C61CB);
   textFont(Puff);
   textSize(40);
-  text("voltar", 335, 670);
+  if (mouseX > 300 && mouseX < 500 && mouseY > 600 && mouseY < 700) {
+    strokeWeight(3); 
+    stroke(corBordaBotaoHover); 
+  } else {
+    strokeWeight(1); 
+    stroke(corBordaBotao);
+  }
+  text("VOLTAR", 325, 670);
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
       brinquedos = false;
