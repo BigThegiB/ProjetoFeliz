@@ -41,21 +41,21 @@ void ReciclagemClickSolto() {
   if (TrashInMouse) {
     TrashInMouse = false;
   }
-  if (MouseClick(width*0.1f, width*0.1+105f, height*0.3125f, height*0.3125+165f) && MetalCheck.contains(TipoDoItem)) {
+  if (MouseClick(width*0.1f, width*0.1+105f, height * 0.4f, height * 0.4+165f) && MetalCheck.contains(TipoDoItem)) {
     ReciclavelSpawned = false;
   }
 
 
-  if (MouseClick(width*0.26625f, width*0.26625+105f, height*0.3125f, height*0.3125+165f) && PapelCheck.contains(TipoDoItem)) {
+  if (MouseClick(width*0.26625f, width*0.26625+105f, height * 0.4f, height * 0.4+165f) && PapelCheck.contains(TipoDoItem)) {
     ReciclavelSpawned = false;
   }
-  if (MouseClick(width*0.434375f, width*0.434375+105f, height*0.3125f, height*0.3125+165f) && PlasticoCheck.contains(TipoDoItem)) {
+  if (MouseClick(width*0.434375f, width*0.434375+105f, height * 0.4f, height * 0.4+165f) && PlasticoCheck.contains(TipoDoItem)) {
     ReciclavelSpawned = false;
   }
-  if (MouseClick(width*0.6f, width*0.6+105f, height*0.3125f, height*0.3125+165f) && VidroCheck.contains(TipoDoItem)) {
+  if (MouseClick(width*0.6f, width*0.6+105f, height * 0.4f, height * 0.4+165f) && VidroCheck.contains(TipoDoItem)) {
     ReciclavelSpawned = false;
   }
-  if (MouseClick(width*0.76625f, width*0.76625+105f, height*0.3125f, height*0.3125+165f) && OutrosCheck.contains(TipoDoItem)) {
+  if (MouseClick(width*0.76625f, width*0.76625+105f, height * 0.4f, height * 0.4+165f) && OutrosCheck.contains(TipoDoItem)) {
     ReciclavelSpawned = false;
   }
 }
@@ -65,11 +65,11 @@ void ReciclagemClickSolto() {
 void ReciclavelGameplay() {
   Reciclagem1 = true;
 
-  image(LixoMetal, width * 0.1, height * 0.3125, 105, 165);
-  image(LixoPapel, width * 0.26625, height * 0.3125, 105, 165);
-  image(LixoPlastico, width * 0.434375, height * 0.3125, 105, 165);
-  image(LixoVidro, width * 0.6, height * 0.3125, 105, 165);
-  image(LixoNao, width * 0.76625, height * 0.3125, 105, 165);
+  image(LixoMetal, width * 0.1, height * 0.4, 105, 165);
+  image(LixoPapel, width * 0.26625, height * 0.4, 105, 165);
+  image(LixoPlastico, width * 0.434375, height * 0.4, 105, 165);
+  image(LixoVidro, width * 0.6, height * 0.4, 105, 165);
+  image(LixoNao, width * 0.76625, height * 0.4, 105, 165);
   LoadItem(ItemReciclavel);
   if (Todas.isEmpty() && !ReciclavelSpawned) {
     Reciclagem1Completed = true;

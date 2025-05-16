@@ -59,3 +59,5 @@ int tamflor=200;
 int xgota=700;
 int ygota=200;
 boolean planta=false;
+
+

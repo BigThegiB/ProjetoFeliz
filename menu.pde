@@ -84,6 +84,5 @@ void ClickMenu() {
     if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){planta= true;Menu = false;}
 
     println("Botão com imagem 3 foi clicado!");
-   
   }
 }
