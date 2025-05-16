@@ -85,8 +85,13 @@ void ReciclavelGameplay() {
   }
 
   image(ItemReciclavel, ReciclavelX, ReciclavelY, 64*2, 64*2);
-}
+  textFont(Puff); textSize(32); fill(0,0,0); //Texto Settings
+  text("Voltar",width*0.0125,height*0.04);
+  if (mousePressed && MouseClick(0,width*0.1375,0,height*0.04375)){
+  Menu = true;
+  Reciclagem1 = false;}
 
+}  
 
 
 // on click set bool mouse following to true
