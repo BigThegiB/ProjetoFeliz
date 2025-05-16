@@ -2,16 +2,24 @@ void mostrar() {
   for (int i = 0; i < imagens.length; i++) {
     image(imagens[i], posX[i], posY[i]);
   }
+  
 }
 
 void escolherBrinquedo() {
     for (int i = 0; i < imagens.length; i++) {
     if (mouseX > posX[i] && mouseX < posX[i] + larguras[i] &&
+<<<<<<< Updated upstream
         mouseY > posY[i] && mouseY < posY[i] + alturas[i]) {
       println("Imagem " + (i+1) + "!");
       
     }
   }
+=======
+      mouseY > posY[i] && mouseY < posY[i] + alturas[i]) {
+      println("Imagem " + (i+1) + "!", i);
+     }
+   }
+>>>>>>> Stashed changes
 }
 
 void AlturaLargura() {
@@ -28,3 +36,49 @@ void texto() {
   text("montar um", 220, 400);
   text("brinquedo?", 230, 500);
 }
+<<<<<<< Updated upstream
+=======
+
+void BotaoBrinquedo() {
+  fill(#FFFFFF);
+  rect(300, 650, 200, 100, 20);
+  fill(#5C61CB);
+  textFont(Puff);
+  textSize(40);
+  if (mouseX > 300 && mouseX < 500 && mouseY > 650 && mouseY < 750) {
+    strokeWeight(3); 
+    stroke(corBordaBotaoHover); 
+  } else {
+    strokeWeight(0); 
+    stroke(corBordaBotao);
+  }
+  text("VOLTAR", 325, 720);
+  if (mousePressed) {
+    if (MouseClick(300, 500, 650, 750)) {
+      brinquedos = false;
+      Menu = true;
+    }
+  }
+}
+
+void BotaoVideo() {
+  fill(#FFFFFF);
+  rect(300, 650, 200, 100, 20);
+  fill(#5C61CB);
+  textFont(Puff);
+  textSize(40);
+  if (mouseX > 300 && mouseX < 500 && mouseY > 650 && mouseY < 750) {
+    strokeWeight(3); 
+    stroke(corBordaBotaoHover); 
+  } else {
+    strokeWeight(0); 
+    stroke(corBordaBotao);
+  }
+  text("VOLTAR", 325, 720);
+}
+
+void TocarVideo(int VideoEscolhido) {
+  Video[VideoEscolhido].loop();
+  image(Video[VideoEscolhido], 0, 0, width, height);
+}
+>>>>>>> Stashed changes

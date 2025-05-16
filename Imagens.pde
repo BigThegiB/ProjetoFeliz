@@ -11,4 +11,27 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   imagens[2] = loadImage("Img3.png");
   imagens[3] = loadImage("Img4.png");
   fundo = loadImage("background1.0.png");
+<<<<<<< Updated upstream
+=======
+  imgBotao1 = loadImage("imagem_botao1.jpg");
+  imgBotao2 = loadImage("imagem_botao2.jpg");
+  imgBotao3 = loadImage("imagem_botao3.jpg");
+  Video[0] = new Movie(this, "carrinho.mp4"); 
+  Video[1] = new Movie(this, "binóculo.mp4"); 
+  Video[2] = new Movie(this, "foguete.mp4"); 
+  Video[3] = new Movie(this, "bilboque.mp4"); 
+  
+  //Cu = new Movie(this, "Cucumber.mp4");
+  
+  botao1X = xInicial;
+  botao1Y = yComumParaBotoes;
+
+  botao2X = botao1X + botaoLargura + espacamentoHorizontal;
+  botao2Y = yComumParaBotoes;
+
+  botao3X = botao2X + botaoLargura + espacamentoHorizontal;
+  botao3Y = yComumParaBotoes;
+    smooth();
+
+>>>>>>> Stashed changes
 }
