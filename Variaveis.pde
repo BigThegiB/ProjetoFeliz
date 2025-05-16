@@ -1,4 +1,4 @@
-boolean Reciclagem1 = true;
+boolean Reciclagem1 = false;
 boolean ReciclavelSpawned = false;
 boolean Reciclagem1Completed = false;
 ArrayList<String> Metal = new ArrayList<String>(Arrays.asList("LataPequena", "LataGrande", "LataRefri"));
@@ -17,3 +17,45 @@ PImage LixoVidro;
 boolean TrashInMouse = false;
 PImage ItemReciclavel;
 PImage TestWin;
+
+//-----------------
+
+boolean brinquedos = false;
+PImage[] imagens = new PImage[4];
+int[] posX = {40, 460, 40, 480};
+int[] posY = {40, 40, 460, 460};
+int[] larguras = new int[4];
+int[] alturas = new int[4];
+PImage fundo;
+
+//-----------------
+boolean Menu = true;
+int svar = 1;
+PImage imgBotao1;
+PImage imgBotao2;
+PImage imgBotao3;
+
+
+int botao1X, botao1Y;
+int botaoLargura = 200;
+int botaoAltura = 200;
+int botao2X, botao2Y;
+int botao3X, botao3Y;
+
+  int espacamentoHorizontal = 50; 
+  int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
+  int xInicial = 50;
+  int yComumParaBotoes = 250;
+
+  //----------------------
+Movie videoteste;// cria a variavel que armatamflorenará o video
+int textoOrdem = 0;//controla o que vai ser exgotaibido no retangulo
+PImage img;//váriavel da imagem//imagem da nuvem
+PImage img2;//imagem da flor
+PImage backg;
+PFont puff;
+
+int tamflor=200;
+int xgota=700;
+int ygota=200;
+boolean planta=false;
