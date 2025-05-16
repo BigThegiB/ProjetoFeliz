@@ -1,8 +1,3 @@
-
-void configurarvideo(){
-  videoteste = new Movie(this, "plantavideo.mp4"); // carrega o video
-  videoteste.loop();} // repete o vídeo em loop
-  
 void desenharAsImagens(){ 
   image(img, 400, 100, 300, 200);//desenha a nuvem
   image(img2, 420, 600 - tamflor/2, tamflor, tamflor);//desenha a flor
@@ -18,8 +13,7 @@ void desenharAsImagens(){
   textAlign(LEFT, TOP); // Alinha o texgotato no canto superior esquerdo
   textSize(24); // Tamanho da fonte
   fill(0); // Cor do texgotato (preto)
-  puff = createFont("DynaPuff-SemiBold.otf", 24);
-  textFont(puff);}
+  textFont(Puff);}
   
   void PlantaTecla(){
   
@@ -34,7 +28,7 @@ void quadrado() { // funcao da 'caixgotaa de texgotato'
     rect(0, 0, width / 2, height / 4); // parâmetros do retângulo
     fill(0); // cor do texto (preto)
     
-    textFont(puff);
+    textFont(Puff);
     if (textoOrdem == 1) {
       
       text("São responsáveis pela geração de oxgotaigênio através do processo de fotossíntese, que é vital para a sobrevivência de muitos organismos, inclusive do homem. Além disso, as plantas servem como fonte primária de alimento para herbívoros, formando a base da cadeia alimentar na maioria dos ecossistemas.", 10, 10, width / 2, height / 4);
@@ -45,12 +39,6 @@ void quadrado() { // funcao da 'caixgotaa de texgotato'
   }
 }
 
-
-void imagem() {
-  img = loadImage("nuvenzinha.png");//carrega a imagem da nuvem
-  img2 = loadImage("florzinha.png");//carrega a imagem da flor
-  
-}
 
 
 void gotinhas(int xgota, int ygota) {//caracteristicas das gotinhas
@@ -72,9 +60,6 @@ if (mousePressed){
   //configurarvideo();}//chama essa função
  }
   }
- if ((mouseX>0) && (mouseX<400) && (mouseY>0) && (mouseY<=200)){
-   configurarvideo();
-}
 }
 }
 

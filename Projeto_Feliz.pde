@@ -1,5 +1,3 @@
-
-import com.hamoid.*;
 void setup() {
   size(800, 800);
   TodasAdd(); // Favor não tirar
@@ -30,9 +28,14 @@ void draw() {
     }
   }
   if (planta){
+    Menu = false;
   background(fundo);
-  imagem();
+desenharAsImagens();//chama a função
+  quadrado(); // chama a função 
+  PlantaTecla();
   ClickPlanta();
+  textodaPlanta();
+  //chama essa função
   
 }
 }

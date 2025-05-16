@@ -53,11 +53,8 @@ int textoOrdem = 0;//controla o que vai ser exgotaibido no retangulo
 PImage img;//váriavel da imagem//imagem da nuvem
 PImage img2;//imagem da flor
 PImage backg;
-PFont puff;
 
 int tamflor=200;
 int xgota=700;
 int ygota=200;
 boolean planta=false;
-
-
