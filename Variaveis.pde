@@ -20,15 +20,11 @@ PImage TestWin;
 
 //-----------------
 
-boolean brinquedos = true;
+boolean brinquedos = false;
 PImage[] imagens = new PImage[4];
-<<<<<<< Updated upstream
-int[] posX = {40, 460, 40, 460};
-int[] posY = {40, 40, 460, 460};
-=======
+
 int[] posX = {40, 490, 10, 500};
 int[] posY = {10, 10, 460, 460};
->>>>>>> Stashed changes
 int[] larguras = new int[4];
 int[] alturas = new int[4];
 PImage fundo;
@@ -38,8 +34,6 @@ boolean VideoRodando = false;
 //Movie Cu;
 
 //-----------------
-<<<<<<< Updated upstream
-=======
 
 boolean Menu = true;
 int svar = 1;
@@ -59,5 +53,3 @@ int botao3X, botao3Y;
   int xInicial = 50;
   int yComumParaBotoes = 250;
 
-  
->>>>>>> Stashed changes

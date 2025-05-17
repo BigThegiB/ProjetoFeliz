@@ -4,9 +4,14 @@ void setup() {
   CarregarImagens();
 }
 void draw() {
-<<<<<<< Updated upstream
+
+  if(Menu){  botoes();
+ ClickMenu();}
+  
+  
+
   if (brinquedos) {
-=======
+
   //Cu.loop();
   //image(Cu, 0, 0);
   
@@ -16,17 +21,20 @@ if (Menu) {
  }
   
 if (brinquedos) {
->>>>>>> Stashed changes
+
   background(fundo);
   mostrar();
   AlturaLargura();
   texto();
-<<<<<<< Updated upstream
+
+
+  BotaoBrinquedo();
+
   }
-=======
+
   BotaoBrinquedo();
 }
->>>>>>> Stashed changes
+
   
   if (Reciclagem1) { // Variavel para fazer o codigo inteiro rodar, só fazer o menu ativar ela e a magica vai acontecer (se possivel fazer o menu nn renderizar quando ela ta ativa)
     if (!Reciclagem1Completed) {
@@ -34,6 +42,10 @@ if (brinquedos) {
       ReciclavelGameplay();
     } else {
       background(TestWin);
+      delay(3000);
+      Menu = true;
+      delay(300);
+      Reciclagem1=false;
     }
   }
 }
