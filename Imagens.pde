@@ -6,10 +6,10 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   LixoVidro = loadImage("LixoVidro.png");
   Puff = createFont("DynaPuff-SemiBold.ttf", 64);
   TestWin = loadImage("TestWin.png");
-  imagens[0] = loadImage("Img1.png");
-  imagens[1] = loadImage("Img2.png");
-  imagens[2] = loadImage("Img3.png");
-  imagens[3] = loadImage("Img4.png");
+  imagens[0] = loadImage("Img1.PNG");
+  imagens[1] = loadImage("Img2.PNG");
+  imagens[2] = loadImage("Img3.PNG");
+  imagens[3] = loadImage("Img4.PNG");
   fundo = loadImage("background1.0.png");
 
   imgBotao1 = loadImage("imagem_botao1.jpg");
