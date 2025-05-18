@@ -23,9 +23,15 @@ void AlturaLargura() {
 
 void texto() {
   textFont(Puff);
-  text("Vamos", 290, 300);
-  text("montar um", 220, 400);
-  text("brinquedo?", 230, 500);
+  fill(#3C43BF);
+  text("Vamos", PosicaoTextoX + 290, PosicaoTextoY + 300);
+  text("montar um", PosicaoTextoX + 220, PosicaoTextoY + 400);
+  text("brinquedo?", PosicaoTextoX + 230, PosicaoTextoY + 500);
+  
+  fill(#5C61CB);
+  text("Vamos", PosicaoTextoX + 293, PosicaoTextoY + 297);
+  text("montar um", PosicaoTextoX + 223, PosicaoTextoY + 397);
+  text("brinquedo?", PosicaoTextoX + 233, PosicaoTextoY + 497);
 }
 
 void BotaoBrinquedo() {
@@ -38,10 +44,13 @@ void BotaoBrinquedo() {
     strokeWeight(3); 
     stroke(corBordaBotaoHover); 
   } else {
-    strokeWeight(1); 
+    strokeWeight(0); 
     stroke(corBordaBotao);
   }
-  text("VOLTAR", 325, 670);
+  fill(#3C43BF);
+  text("VOLTAR", PosicaoBotaoX + 325, PosicaoBotaoY + 670);
+  fill(#5C61CB);
+  text("VOLTAR", PosicaoBotaoX + 328, PosicaoBotaoY + 667);
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
       brinquedos = false;

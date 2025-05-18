@@ -22,13 +22,18 @@ PImage TestWin;
 
 boolean brinquedos = false;
 PImage[] imagens = new PImage[4];
-int[] posX = {40, 460, 40, 480};
-int[] posY = {40, 40, 460, 460};
+int[] posX = {10, 500, 0, 500};
+int[] posY = {10, 10, 500, 500};
 int[] larguras = new int[4];
 int[] alturas = new int[4];
 PImage fundo;
+int PosicaoTextoX = 0;
+int PosicaoTextoY = 0;
+int PosicaoBotaoX = 0;
+int PosicaoBotaoY = 0;
 
 //-----------------
+
 boolean Menu = true;
 int svar = 1;
 PImage imgBotao1;
