@@ -1,7 +1,30 @@
 void mostrar() {
-  for (int i = 0; i < imagens.length; i++) {
-    image(imagens[i], posX[i], posY[i]);
+  if (Reproduzindo == false){
+    background(fundo);
+    texto();
+    for (int i = 0; i < imagens.length; i++) {
+      image(imagens[i], posX[i], posY[i]);
+    }
   }
+}
+
+void mostrarVideo() {
+  if (Reproduzindo && imagemSelecionada != -1) {
+    background(fundo);
+    image(videos[imagemSelecionada], 0, 150, 800, 400);
+    brinquedos = false;
+    BotaoBrinquedo();
+    strokeWeight(3); 
+    stroke(corBordaBotaoHover);
+    noFill();
+    rect(1, 150, 797, 400);
+  }
+}
+
+void brinquedo(){
+  mostrar();
+  AlturaLargura();
+  BotaoBrinquedo();
 }
 
 void escolherBrinquedo() {
@@ -9,6 +32,12 @@ void escolherBrinquedo() {
     if (mouseX > posX[i] && mouseX < posX[i] + larguras[i] &&
       mouseY > posY[i] && mouseY < posY[i] + alturas[i]) {
       println("Imagem " + (i+1) + "!");
+      if (imagemSelecionada != -1) {
+        videos[imagemSelecionada].stop();
+      }
+      imagemSelecionada = i;
+      videos[i].loop();
+      Reproduzindo = true; 
     }
   }
 }
@@ -53,6 +82,8 @@ void BotaoBrinquedo() {
   text("VOLTAR", PosicaoBotaoX + 328, PosicaoBotaoY + 667);
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
+      Reproduzindo = false;
+      videos[imagemSelecionada].stop();
       brinquedos = false;
       Menu = true;
     }

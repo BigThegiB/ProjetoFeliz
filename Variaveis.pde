@@ -31,6 +31,9 @@ int PosicaoTextoX = 0;
 int PosicaoTextoY = 0;
 int PosicaoBotaoX = 0;
 int PosicaoBotaoY = 0;
+int imagemSelecionada = -1;
+Movie[] videos = new Movie[4];
+boolean Reproduzindo = false; 
 
 //-----------------
 
