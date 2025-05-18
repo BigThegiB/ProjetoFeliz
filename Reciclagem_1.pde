@@ -38,28 +38,34 @@ void ReciclagemClickSolto() {
   ArrayList<String> PapelCheck = new ArrayList<String>(Arrays.asList("Caixa", "Jornal", "Saco"));
   ArrayList<String> PlasticoCheck = new ArrayList<String>(Arrays.asList("garrafa", "Leite", "Detergente"));
   ArrayList<String> OutrosCheck = new ArrayList<String>(Arrays.asList("CopoIsopor", "Mug", "Pizza", "Pressurizada"));
+
   if (TrashInMouse) {
+    if (MouseClick(width*0.1f, width*0.1+105f, height * 0.4f, height * 0.4+165f) && MetalCheck.contains(TipoDoItem)) {
+      ReciclavelSpawned = false;
+      Correct.play();
+      Correct.amp(0.7);
+    } else if (MouseClick(width*0.26625f, width*0.26625+105f, height * 0.4f, height * 0.4+165f) && PapelCheck.contains(TipoDoItem)) {
+      ReciclavelSpawned = false;
+      Correct.play();
+      Correct.amp(0.7);
+    } else if (MouseClick(width*0.434375f, width*0.434375+105f, height * 0.4f, height * 0.4+165f) && PlasticoCheck.contains(TipoDoItem)) {
+      ReciclavelSpawned = false;
+      Correct.play();
+      Correct.amp(0.7);
+    } else if (MouseClick(width*0.6f, width*0.6+105f, height * 0.4f, height * 0.4+165f) && VidroCheck.contains(TipoDoItem)) {
+      ReciclavelSpawned = false;
+      Correct.play();
+      Correct.amp(0.7);
+    } else if (MouseClick(width*0.76625f, width*0.76625+105f, height * 0.4f, height * 0.4+165f) && OutrosCheck.contains(TipoDoItem)) {
+      ReciclavelSpawned = false;
+      Correct.play();
+      Correct.amp(0.7);
+    } else if (MouseClick(width*0.1f, width*width*0.76625+105f, height * 0.4f, height * 0.4+165f)) {
+      Incorrect.play();
+    }
     TrashInMouse = false;
   }
-  if (MouseClick(width*0.1f, width*0.1+105f, height * 0.4f, height * 0.4+165f) && MetalCheck.contains(TipoDoItem)) {
-    ReciclavelSpawned = false;
-  }
-
-
-  if (MouseClick(width*0.26625f, width*0.26625+105f, height * 0.4f, height * 0.4+165f) && PapelCheck.contains(TipoDoItem)) {
-    ReciclavelSpawned = false;
-  }
-  if (MouseClick(width*0.434375f, width*0.434375+105f, height * 0.4f, height * 0.4+165f) && PlasticoCheck.contains(TipoDoItem)) {
-    ReciclavelSpawned = false;
-  }
-  if (MouseClick(width*0.6f, width*0.6+105f, height * 0.4f, height * 0.4+165f) && VidroCheck.contains(TipoDoItem)) {
-    ReciclavelSpawned = false;
-  }
-  if (MouseClick(width*0.76625f, width*0.76625+105f, height * 0.4f, height * 0.4+165f) && OutrosCheck.contains(TipoDoItem)) {
-    ReciclavelSpawned = false;
-  }
 }
-
 
 
 void ReciclavelGameplay() {
@@ -83,17 +89,27 @@ void ReciclavelGameplay() {
     ReciclavelX = mouseX-60;
     ReciclavelY = mouseY-80;
   }
+  if (!Reciclagem1Completed) {
+    image(ItemReciclavel, ReciclavelX, ReciclavelY, 64*2, 64*2);
+  }
+  textFont(Puff);
+  textSize(32);
+  fill(0, 0, 0); //Texto Settings
+  text("Voltar", width*0.0125, height*0.04);
+  if (!ReciclagemBGM.isPlaying()) {
+    ReciclagemBGM.loop();
+  }
+  if (mousePressed && MouseClick(0, width*0.1375, 0, height*0.04375)) {
+    Menu = true;
+    Reciclagem1 = false;
+    ReciclagemBGM.stop();
+  }
+}
 
-  image(ItemReciclavel, ReciclavelX, ReciclavelY, 64*2, 64*2);
-  textFont(Puff); textSize(32); fill(0,0,0); //Texto Settings
-  text("Voltar",width*0.0125,height*0.04);
-  if (mousePressed && MouseClick(0,width*0.1375,0,height*0.04375)){
-  Menu = true;
-  Reciclagem1 = false;}
-
-}  
-
-
-// on click set bool mouse following to true
-// follow X and Y while true
-// on mouse release become false
+void TodasAdd() {
+  Todas.add(Metal);
+  Todas.add(Vidro);
+  Todas.add(Papel);
+  Todas.add(Plastico);
+  Todas.add(Outros);
+}

@@ -64,8 +64,6 @@ void ClickMenu() {
     }
 
 
-    println("Botão com imagem 1 foi clicado!");
-
     // Verificar se o clique foi dentro do Botão 2
     if (MouseClick(botao2X, botao2X+botaoLargura, botao2Y, botao2Y+botaoAltura)) {
       Reciclagem1 = true;
@@ -79,11 +77,11 @@ void ClickMenu() {
       Outros = new ArrayList<String>(Arrays.asList("CopoIsopor", "Mug", "Pizza", "Pressurizada"));
       TodasAdd();
     }}
-    println("Botão com imagem 2 foi clicado!");
+
     //// Verificar se o clique foi dentro do Botão 3
     //if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){glaucia = true;Menu = false}
 
-    println("Botão com imagem 3 foi clicado!");
+
     if (MouseClick(0, 100, 0, 40)) {
       Menu = true;
     }
