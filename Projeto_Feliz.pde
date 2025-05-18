@@ -47,8 +47,7 @@ void draw() {
   ClickPlanta();
   textodaPlanta();
   BotaoPlantaMenu();
-  //configurarvideo();
-  BotaoPlantaVideo();
+  BotaoPlantaVideo();//botao para pausar o video
   
   
 }

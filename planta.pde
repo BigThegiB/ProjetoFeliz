@@ -5,7 +5,7 @@ void configurarvideo(){
   
   videoteste = new Movie(this, "plantavideo.mp4");   // carrega o video
   videoteste.loop();   // repete o vídeo em loop
-  
+   
  } 
 
   
@@ -65,9 +65,9 @@ if (mousePressed){
  }
   }
 if ((mouseX>0) && (mouseX<400) && (mouseY>0) && (mouseY<=200)){  //area da caixa de texto
-   BotaoPlantaVideo();
+   
    configurarvideo();
-
+  // BotaoPlantaVideo();
    //videoteste.jump(0);
  }
 }}
@@ -98,10 +98,9 @@ void BotaoPlantaMenu() {
   
   if (mousePressed) {
     if (MouseClick(150, 250, 600, 700)) { 
+      videoteste.stop();
       planta = false;
       Menu = true;
-      
-    
   }
   }
 }
