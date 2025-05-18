@@ -64,11 +64,6 @@ void texto() {
 }
 
 void BotaoBrinquedo() {
-  fill(#FFFFFF);
-  rect(300, 600, 200, 100, 20);
-  fill(#5C61CB);
-  textFont(Puff);
-  textSize(40);
   if (mouseX > 300 && mouseX < 500 && mouseY > 600 && mouseY < 700) {
     strokeWeight(3); 
     stroke(corBordaBotaoHover); 
@@ -76,10 +71,16 @@ void BotaoBrinquedo() {
     strokeWeight(0); 
     stroke(corBordaBotao);
   }
+  fill(#FFFFFF);
+  rect(300, 600, 200, 100, 20);
+  fill(#5C61CB);
+  textFont(Puff);
+  textSize(40);
   fill(#3C43BF);
   text("VOLTAR", PosicaoBotaoX + 325, PosicaoBotaoY + 670);
   fill(#5C61CB);
   text("VOLTAR", PosicaoBotaoX + 328, PosicaoBotaoY + 667);
+
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
       Reproduzindo = false;
