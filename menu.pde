@@ -59,13 +59,15 @@ void ClickMenu() {
   if (mousePressed) {
     // Verificar se o clique foi dentro do Botão 1
     if (MouseClick(botao1X, botao1X+botaoLargura, botao1Y, botao1Y+botaoAltura)) {
+      println("Botão com imagem 1 foi clicado!");
+      SomBotao.play();
       brinquedos = true;
       Menu = false;
     }
-
-
     // Verificar se o clique foi dentro do Botão 2
     if (MouseClick(botao2X, botao2X+botaoLargura, botao2Y, botao2Y+botaoAltura)) {
+      println("Botão com imagem 2 foi clicado!");
+      SomBotao.play();
       Reciclagem1 = true;
       Menu = false;
       Reciclagem1Completed = false;
@@ -77,13 +79,12 @@ void ClickMenu() {
       Outros = new ArrayList<String>(Arrays.asList("CopoIsopor", "Mug", "Pizza", "Pressurizada"));
       TodasAdd();
     }}
-
     //// Verificar se o clique foi dentro do Botão 3
-    //if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){glaucia = true;Menu = false}
-
-
-    if (MouseClick(0, 100, 0, 40)) {
-      Menu = true;
-    }
+    //if (MouseClick(botao3X,botao3X+botaoLargura,botao3Y,botao3Y+botaoAltura)){
+      //println("Botão com imagem 3 foi clicado!");
+      //SomBotao.play();
+      //glaucia = true;
+      //Menu = false
+    //}
   }
 }

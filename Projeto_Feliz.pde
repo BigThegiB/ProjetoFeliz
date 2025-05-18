@@ -4,9 +4,15 @@ void setup() {
   CarregarImagens();
 }
 void draw() {
-  if (Menu) {
-    botoes();
-    ClickMenu();
+  if(Menu){  botoes();
+ ClickMenu();}
+  
+  
+  if (brinquedos && !Reproduzindo) {
+    Menu = false;
+    brinquedo();
+  } else if (Reproduzindo && imagemSelecionada != -1) {
+    mostrarVideo();
   }
 
 
