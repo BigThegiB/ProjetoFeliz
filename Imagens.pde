@@ -22,9 +22,9 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   videos[2] = new Movie(this, "video3.mp4");
   videos[3] = new Movie(this, "video4.mp4");
   fundo = loadImage("background1.0.png");
-  imgBotao1 = loadImage("imagem_botao1.jpg");
-  imgBotao2 = loadImage("imagem_botao2.jpg");
-  imgBotao3 = loadImage("imagem_botao3.jpg");
+  imgBotao1 = loadImage("imagem_botao1.png");
+  imgBotao2 = loadImage("imagem_botao2.png");
+  imgBotao3 = loadImage("imagem_botao3.png");
   SomBotao = new SoundFile(this, "SomBotao.wav");
   
   //------------
