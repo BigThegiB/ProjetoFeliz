@@ -34,6 +34,7 @@ void draw() {
         Victory.play();
         Victory.amp(0.3);
       }
+      delay(1);
       background(TestWin);
       delay(3000);
       Menu = true;

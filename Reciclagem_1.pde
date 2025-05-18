@@ -103,7 +103,7 @@ void ReciclavelGameplay() {
     Menu = true;
     Reciclagem1 = false;
     ReciclagemBGM.stop();
-    SomBotao.play();
+    SomBotao.play();SomBotao.amp(0.5);
   }
 }
 
