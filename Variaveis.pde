@@ -17,18 +17,31 @@ PImage LixoVidro;
 boolean TrashInMouse = false;
 PImage ItemReciclavel;
 PImage TestWin;
+SoundFile ReciclagemBGM;
+SoundFile Correct;
+SoundFile Incorrect;
+SoundFile Victory;
 
 //-----------------
 
 boolean brinquedos = false;
 PImage[] imagens = new PImage[4];
-int[] posX = {40, 460, 40, 480};
-int[] posY = {40, 40, 460, 460};
+int[] posX = {10, 500, 0, 500};
+int[] posY = {10, 10, 500, 500};
 int[] larguras = new int[4];
 int[] alturas = new int[4];
 PImage fundo;
+int PosicaoTextoX = 0;
+int PosicaoTextoY = 0;
+int PosicaoBotaoX = 0;
+int PosicaoBotaoY = 0;
+int imagemSelecionada = -1;
+Movie[] videos = new Movie[4];
+boolean Reproduzindo = false; 
+SoundFile SomBotao;
 
 //-----------------
+
 boolean Menu = true;
 int svar = 1;
 PImage imgBotao1;
@@ -41,6 +54,7 @@ int botaoLargura = 200;
 int botaoAltura = 200;
 int botao2X, botao2Y;
 int botao3X, botao3Y;
+
 
   int espacamentoHorizontal = 50; 
   int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
@@ -59,3 +73,5 @@ int ygota = 200;
 boolean planta = false;
 int crescimentoflorY = 500;
 int crescimentoflorX = 420;
+
+

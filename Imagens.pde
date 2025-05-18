@@ -5,16 +5,30 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   LixoPlastico = loadImage("LixoPlastico.png");
   LixoVidro = loadImage("LixoVidro.png");
   Puff = createFont("DynaPuff-SemiBold.ttf", 64);
+  ReciclagemBGM = new SoundFile(this, "ReciclagemBGM.mp3");
+  Correct = new SoundFile(this, "Correct.mp3");
+  Incorrect = new SoundFile(this, "Incorrect.mp3");
+  Victory = new SoundFile(this, "Victory.mp3");
   TestWin = loadImage("TestWin.png");
+  
+  //------------
+  
   imagens[0] = loadImage("Img1.png");
   imagens[1] = loadImage("Img2.png");
   imagens[2] = loadImage("Img3.png");
   imagens[3] = loadImage("Img4.png");
+  videos[0] = new Movie(this, "video1.mp4");
+  videos[1] = new Movie(this, "video2.mp4");
+  videos[2] = new Movie(this, "video3.mp4");
+  videos[3] = new Movie(this, "video4.mp4");
   fundo = loadImage("background1.0.png");
   imgBotao1 = loadImage("imagem_botao1.jpg");
   imgBotao2 = loadImage("imagem_botao2.jpg");
   imgBotao3 = loadImage("imagem_botao3.jpg");
-
+  SomBotao = new SoundFile(this, "SomBotao.wav");
+  
+  //------------
+  
   botao1X = xInicial;
   botao1Y = yComumParaBotoes;
 
@@ -23,8 +37,12 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
 
   botao3X = botao2X + botaoLargura + espacamentoHorizontal;
   botao3Y = yComumParaBotoes;
-    smooth();
+
+  smooth();
+  
   img = loadImage("nuvenzinha.png");//carrega a imagem da nuvem
   img2 = loadImage("florzinha.png");//carrega a imagem da flor
    //videoteste = new Movie(this, "plantavideo.mp4"); // carrega o video
-}
+
+
+
