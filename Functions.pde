@@ -12,4 +12,3 @@ boolean MouseClick(float MouseX1, float MouseX2, float MouseY1, float MouseY2) {
 void movieEvent(Movie m) {
   m.read();
 }
-
