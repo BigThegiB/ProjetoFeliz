@@ -26,5 +26,5 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
     smooth();
   img = loadImage("nuvenzinha.png");//carrega a imagem da nuvem
   img2 = loadImage("florzinha.png");//carrega a imagem da flor
-    videoteste = new Movie(this, "plantavideo.mp4"); // carrega o video
+   //videoteste = new Movie(this, "plantavideo.mp4"); // carrega o video
 }

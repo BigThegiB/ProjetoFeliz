@@ -1,11 +1,19 @@
+
+
 void setup() {
   size(800, 800);
   TodasAdd(); // Favor não tirar
   CarregarImagens();
+  
 }
 void draw() {
   if(Menu){  botoes();
- ClickMenu();}
+ ClickMenu();
+  }
+  
+  
+
+ 
  
   if (brinquedos) {
   background(fundo);
@@ -13,6 +21,7 @@ void draw() {
   AlturaLargura();
   texto();
   BotaoBrinquedo();
+  
   }
  
   if (Reciclagem1) { // Variavel para fazer o codigo inteiro rodar, só fazer o menu ativar ela e a magica vai acontecer (se possivel fazer o menu nn renderizar quando ela ta ativa)
@@ -27,18 +36,25 @@ void draw() {
       Reciclagem1=false;
     }
   }
+  
+  
   if (planta){
-    Menu = false;
+  Menu = false;
   background(fundo);
-desenharAsImagens();//chama a função
-  quadrado(); // chama a função 
+  desenharAsImagens();
+  quadrado(); 
   PlantaTecla();
   ClickPlanta();
   textodaPlanta();
-  //chama essa função
+  BotaoPlantaMenu();
+  //configurarvideo();
+  BotaoPlantaVideo();
+  
   
 }
 }
+
+
 void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb
   if (Reciclagem1) {
     ReciclagemClickSolto();

@@ -48,13 +48,14 @@ int botao3X, botao3Y;
   int yComumParaBotoes = 250;
 
   //----------------------
-Movie videoteste;// cria a variavel que armatamflorenará o video
-int textoOrdem = 0;//controla o que vai ser exgotaibido no retangulo
-PImage img;//váriavel da imagem//imagem da nuvem
+int textoOrdem = 0;//controla o que vai ser exibido no retangulo
+PImage img;//imagem da nuvem
 PImage img2;//imagem da flor
-PImage backg;
 
-int tamflor=200;
-int xgota=700;
-int ygota=200;
-boolean planta=false;
+Movie videoteste;
+int tamflor = 200;
+int xgota = 700; 
+int ygota = 200;
+boolean planta = false;
+int crescimentoflorY = 500;
+int crescimentoflorX = 420;
