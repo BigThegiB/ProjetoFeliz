@@ -4,25 +4,21 @@ void setup() {
   size(800, 800);
   TodasAdd(); // Favor não tirar
   CarregarImagens();
-  
 }
 void draw() {
-  if(Menu){  botoes();
- ClickMenu();
+  if (Menu) {
+    botoes();
+    ClickMenu();
   }
-  
 
- 
- 
   if (brinquedos) {
-  background(fundo);
-  mostrar();
-  AlturaLargura();
-  texto();
-  BotaoBrinquedo();
-  
+    background(fundo);
+    mostrar();
+    AlturaLargura();
+    texto();
+    BotaoBrinquedo();
   }
- 
+
 
   if (brinquedos && !Reproduzindo) {
     Menu = false;
@@ -52,22 +48,20 @@ void draw() {
       Reciclagem1=false;
     }
   }
-  
-  
-  if (planta){
-  Menu = false;
-  background(fundo);
-  desenharAsImagens();
-  quadrado(); 
-  PlantaTecla();
-  ClickPlanta();
-  textodaPlanta();
-  BotaoPlantaMenu();
-  BotaoPlantaVideo();//botao para pausar o video
-  
-  
-}
 
+
+  if (planta) {
+    Menu = false;
+    background(fundo);
+    desenharAsImagens();
+    quadrado();
+    PlantaTecla();
+    ClickPlanta();
+    textodaPlanta();
+    BotaoPlantaMenu();
+    BotaoPlantaVideo();//botao para pausar o video
+  }
+}
 
 
 

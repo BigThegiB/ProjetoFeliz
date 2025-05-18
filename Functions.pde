@@ -1,8 +1,6 @@
 // Página para funções globais, que são uteis para todos e imports
 import java.util.ArrayList;
 import java.util.Arrays;
-
-
 import processing.video.*;
 import processing.sound.*;
 

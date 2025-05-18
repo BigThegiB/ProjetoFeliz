@@ -123,9 +123,3 @@ void BotaoPlantaVideo(){
   }
 }    
 }
-
-
-void movieEvent(Movie m){ //Essa é uma função de callback que o Processing chama automaticamente sempre que um novo quadro do vídeo está disponível.
-  m.read();
-  
-}
