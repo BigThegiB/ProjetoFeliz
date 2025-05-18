@@ -5,6 +5,10 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   LixoPlastico = loadImage("LixoPlastico.png");
   LixoVidro = loadImage("LixoVidro.png");
   Puff = createFont("DynaPuff-SemiBold.ttf", 64);
+  ReciclagemBGM = new SoundFile(this, "ReciclagemBGM.mp3");
+  Correct = new SoundFile(this, "Correct.mp3");
+  Incorrect = new SoundFile(this, "Incorrect.mp3");
+  Victory = new SoundFile(this, "Victory.mp3");
   TestWin = loadImage("TestWin.png");
   
   //------------
@@ -33,6 +37,5 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
 
   botao3X = botao2X + botaoLargura + espacamentoHorizontal;
   botao3Y = yComumParaBotoes;
-    smooth();
-
+  smooth();
 }

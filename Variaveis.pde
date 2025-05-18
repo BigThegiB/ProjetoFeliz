@@ -17,6 +17,10 @@ PImage LixoVidro;
 boolean TrashInMouse = false;
 PImage ItemReciclavel;
 PImage TestWin;
+SoundFile ReciclagemBGM;
+SoundFile Correct;
+SoundFile Incorrect;
+SoundFile Victory;
 
 //-----------------
 
@@ -51,9 +55,7 @@ int botaoAltura = 200;
 int botao2X, botao2Y;
 int botao3X, botao3Y;
 
-  int espacamentoHorizontal = 50; 
-  int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
-  int xInicial = 50;
-  int yComumParaBotoes = 250;
-
-  
+int espacamentoHorizontal = 50;
+int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
+int xInicial = 50;
+int yComumParaBotoes = 250;
