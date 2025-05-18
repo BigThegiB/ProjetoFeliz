@@ -6,6 +6,9 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   LixoVidro = loadImage("LixoVidro.png");
   Puff = createFont("DynaPuff-SemiBold.ttf", 64);
   TestWin = loadImage("TestWin.png");
+  
+  //------------
+  
   imagens[0] = loadImage("Img1.png");
   imagens[1] = loadImage("Img2.png");
   imagens[2] = loadImage("Img3.png");
@@ -18,7 +21,10 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   imgBotao1 = loadImage("imagem_botao1.jpg");
   imgBotao2 = loadImage("imagem_botao2.jpg");
   imgBotao3 = loadImage("imagem_botao3.jpg");
-
+  SomBotao = new SoundFile(this, "SomBotao.wav");
+  
+  //------------
+  
   botao1X = xInicial;
   botao1Y = yComumParaBotoes;
 

@@ -34,6 +34,7 @@ int PosicaoBotaoY = 0;
 int imagemSelecionada = -1;
 Movie[] videos = new Movie[4];
 boolean Reproduzindo = false; 
+SoundFile SomBotao;
 
 //-----------------
 

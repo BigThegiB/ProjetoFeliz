@@ -32,6 +32,7 @@ void escolherBrinquedo() {
     if (mouseX > posX[i] && mouseX < posX[i] + larguras[i] &&
       mouseY > posY[i] && mouseY < posY[i] + alturas[i]) {
       println("Imagem " + (i+1) + "!");
+      SomBotao.play();
       if (imagemSelecionada != -1) {
         videos[imagemSelecionada].stop();
       }
@@ -83,8 +84,12 @@ void BotaoBrinquedo() {
 
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
-      Reproduzindo = false;
-      videos[imagemSelecionada].stop();
+      
+      if (Reproduzindo){    
+        Reproduzindo = false;
+        videos[imagemSelecionada].stop();
+      }
+      SomBotao.play();
       brinquedos = false;
       Menu = true;
     }
