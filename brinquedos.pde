@@ -1,5 +1,5 @@
 void mostrar() {
-  if (Reproduzindo == false){
+  if (Reproduzindo == false) {
     background(fundo);
     texto();
     for (int i = 0; i < imagens.length; i++) {
@@ -15,14 +15,14 @@ void mostrarVideo() {
     image(videos[imagemSelecionada], 0, 150, 800, 400);
     brinquedos = false;
     BotaoBrinquedo();
-    strokeWeight(3); 
+    strokeWeight(3);
     stroke(corBordaBotaoHover);
     noFill();
     rect(1, 150, 797, 400);
   }
 }
 
-void brinquedo(){
+void brinquedo() {
   mostrar();
   AlturaLargura();
   BotaoBrinquedo();
@@ -41,7 +41,7 @@ void escolherBrinquedo() {
       imagemSelecionada = i;
       videos[i].loop();
       videos[i].volume(0.4);
-      Reproduzindo = true; 
+      Reproduzindo = true;
     }
   }
 }
@@ -62,7 +62,7 @@ void texto() {
   text("Vamos", PosicaoTextoX + 290, PosicaoTextoY + 300);
   text("montar um", PosicaoTextoX + 220, PosicaoTextoY + 400);
   text("brinquedo?", PosicaoTextoX + 230, PosicaoTextoY + 500);
-  
+
   fill(#5C61CB);
   textSize(64);
   text("Vamos", PosicaoTextoX + 293, PosicaoTextoY + 297);
@@ -72,10 +72,10 @@ void texto() {
 
 void BotaoBrinquedo() {
   if (mouseX > 300 && mouseX < 500 && mouseY > 600 && mouseY < 700) {
-    strokeWeight(3); 
-    stroke(corBordaBotaoHover); 
+    strokeWeight(3);
+    stroke(corBordaBotaoHover);
   } else {
-    strokeWeight(0); 
+    strokeWeight(0);
     stroke(corBordaBotao);
   }
   fill(#FFFFFF);
@@ -90,8 +90,8 @@ void BotaoBrinquedo() {
 
   if (mousePressed) {
     if (MouseClick(300, 500, 600, 700)) {
-      
-      if (Reproduzindo){    
+
+      if (Reproduzindo) {
         Reproduzindo = false;
         videos[imagemSelecionada].stop();
       }

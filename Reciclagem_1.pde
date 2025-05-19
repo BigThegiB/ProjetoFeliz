@@ -12,7 +12,7 @@ PImage EscolherItem() {
     int iItem = int(random(Escolhida.size()));
 
 
-    String ReciclavelNome = Escolhida.get(iItem); //Lembrar de Remover o item da lista depois
+    String ReciclavelNome = Escolhida.get(iItem); 
     PImage ItemReciclavel = loadImage(ReciclavelNome + ".png");
     Escolhida.remove(iItem);
     if (Escolhida.isEmpty()) {
