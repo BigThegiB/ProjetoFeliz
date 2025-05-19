@@ -48,7 +48,8 @@ void draw() {
     ClickPlanta();
     textodaPlanta();
     BotaoPlantaMenu();
-    textoTemporario();
+    if (videoPlanta == null) {
+    textoTemporario();}
   }
 }
 
