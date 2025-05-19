@@ -31,6 +31,7 @@ void textodaPlanta() {
 
 void quadrado() { // funcao da 'caixa de texto'
   if (textoOrdem > 0) {
+    strokeWeight(2);
     fill(#FFFAFA); // cor do retãngulo
     rect(0, 0, width / 1.8, height / 3.5, 20); // parâmetros do retângulo
     fill(#5C61CB); // cor do texto
@@ -64,6 +65,7 @@ void ClickPlanta() {
     if ((mouseX>0) && (mouseX<400) && (mouseY>0) && (mouseY<=200)) {  //area da caixa de texto
       if (videoPlanta == null) {
         configurarvideo();
+        
       }
     }
   }
@@ -119,7 +121,7 @@ void BotaoPlantaVideo() {
   fill(#5C61CB);  //cor da fonte
   textFont(Puff);  //fonte do texto
   textSize(20);  //tamanho da fonte
-  text("Pausar", 705, 25);
+  text("Pausar",705, 30);
 
   if (mousePressed) {
     if ((mouseX > 690) && (mouseX < 790) && (mouseY > 10) && (mouseY < 60)) {
@@ -131,3 +133,9 @@ void BotaoPlantaVideo() {
     }
   }
 }
+
+  
+  
+  
+  
+  
