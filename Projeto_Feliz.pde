@@ -42,6 +42,17 @@ void draw() {
       Reciclagem1=false;
     }
   }
+  if (planta) {
+    Menu = false;
+    background(fundo);
+    quadrado();
+    textodaPlanta();
+    textoTemporario();
+    desenharAsImagens();
+    BotaoPlantaMenu();
+    ClickPlanta();
+  
+  }
 }
 
 void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb

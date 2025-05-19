@@ -43,7 +43,7 @@ SoundFile SomBotao;
 //-----------------
 
 boolean Menu = true;
-int svar = 1;
+float sizemod = 1;
 PImage imgBotao1;
 PImage imgBotao2;
 PImage imgBotao3;
