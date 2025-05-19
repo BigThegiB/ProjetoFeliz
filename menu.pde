@@ -8,8 +8,10 @@ void botoes() {
 void desenharBotaoComImagem(float x, float y, float w, float h, PImage img) {
   if (img != null) {
     image(img, x, y, w, h);
+    
   }
 }
+
 
 void ClickMenu() {
   if (mousePressed) {
