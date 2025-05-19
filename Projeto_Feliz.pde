@@ -43,12 +43,12 @@ void draw() {
   if (planta) {
     Menu = false;
     background(fundo);
-    desenharAsImagens();
-    quadrado();
-    ClickPlanta();
-    textodaPlanta();
-    BotaoPlantaMenu();
     textoTemporario();
+    quadrado();
+    textodaPlanta();
+    desenharAsImagens();
+    ClickPlanta();
+    BotaoPlantaMenu();
   }
 }
 
