@@ -93,6 +93,7 @@ void ReciclavelGameplay() {
     image(ItemReciclavel, ReciclavelX, ReciclavelY, 64*2, 64*2);
   }
   textFont(Puff);
+  textAlign(LEFT);
   textSize(32);
   fill(0, 0, 0); //Texto Settings
   text("Voltar", width*0.0125, height*0.04);

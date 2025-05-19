@@ -9,7 +9,7 @@ void botoes() {
 
   desenharBotaoComImagem(botao1X, botao1Y, botaoLargura, botaoAltura, imgBotao1);
   desenharBotaoComImagem(botao2X, botao2Y, botaoLargura, botaoAltura, imgBotao2);
-  desenharBotaoComImagem(botao3X, botao3Y, botaoLargura, botaoAltura, imgBotao3);
+  desenharBotaoComImagem(botao3X, botao3Y+5, botaoLargura*.9, botaoAltura*.9, imgBotao3);
 }
 //void tela1() {
 //  fill(#FFFFFF);
@@ -37,7 +37,7 @@ void botoes() {
 //}
 
 
-void desenharBotaoComImagem(int x, int y, int w, int h, PImage img) {
+void desenharBotaoComImagem(float x, float y, float w, float h, PImage img) {
 
   if (img != null) {
     image(img, x, y, w, h);
