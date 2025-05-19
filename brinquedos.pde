@@ -53,6 +53,7 @@ void AlturaLargura() {
 }
 
 void texto() {
+  textAlign(LEFT);
   textFont(Puff);
   textSize(64);
   fill(#3C43BF);
