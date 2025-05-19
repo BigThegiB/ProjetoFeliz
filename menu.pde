@@ -42,17 +42,8 @@ void desenharBotaoComImagem(int x, int y, int w, int h, PImage img) {
   if (img != null) {
     image(img, x, y, w, h);
   }
-
-
-  if (mouseX > x && mouseX < x + w && mouseY > y && mouseY < y + h) {
-    strokeWeight(3); // Aumenta a espessura da borda
-    stroke(corBordaBotaoHover); // Muda a cor da borda
-  } else {
-    strokeWeight(1); // Espessura normal da borda
-    stroke(corBordaBotao); // Cor normal da borda
-  }
-  noFill();
-  rect(x, y, w, h, 8);
+  
+  
 }
 
 void ClickMenu() {

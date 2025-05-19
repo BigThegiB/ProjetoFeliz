@@ -11,6 +11,7 @@ void draw() {
     ClickMenu();
   }
 
+
   if (brinquedos) {
     background(fundo);
     mostrar();
@@ -26,6 +27,7 @@ void draw() {
   } else if (Reproduzindo && imagemSelecionada != -1) {
     mostrarVideo();
   }
+
 
 
 
