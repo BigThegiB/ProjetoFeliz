@@ -57,11 +57,10 @@ void draw() {
     background(fundo);
     desenharAsImagens();
     quadrado();
-    PlantaTecla();
     ClickPlanta();
     textodaPlanta();
     BotaoPlantaMenu();
-    BotaoPlantaVideo();//botao para pausar o video
+    
   }
 }
 
@@ -76,4 +75,9 @@ void mouseReleased() { // Função para detectar botão do mouse sendo solto, de
   if (brinquedos) {
     escolherBrinquedo();
   }
+}
+
+  void keyPressed() { //fez-se necessario o uso entao nao tirar
+  textoOrdem = (textoOrdem + 1) % 3;  //alterna em tres estados = aparece o primeiro texto, o segundo texto e sem texto.
+  
 }

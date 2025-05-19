@@ -1,19 +1,17 @@
-///NÃO APAGAR NADA PLEASE
-
 
 void configurarvideo(){
   
-  videoteste = new Movie(this, "plantavideo.mp4");   // carrega o video
-  videoteste.loop();   // repete o vídeo em loop
+  videoPlanta = new Movie(this, "plantavideo.mp4");   // carrega o video
+  videoPlanta.loop();   // repete o vídeo em loop
    
  } 
 
   
 void desenharAsImagens(){ 
-  image(img, 300, 200, 600, 400);//desenha a nuvem
+  image(img, 300, 200, 600, 500);//desenha a nuvem
   image(img2, crescimentoflorX, crescimentoflorY, tamflor, tamflor);//desenha a flor
-  if(videoteste != null){ //diferente de vazio
-  image(videoteste, 0, 0, width, height);} //desenha o video na tela toda
+  if(videoPlanta != null){ //diferente de vazio
+  image(videoPlanta, 0, 0, width, height);} //desenha o video na tela toda
  
 }
 
@@ -24,18 +22,14 @@ void desenharAsImagens(){
   fill(0);   // Cor do texto (preto)
   }
   
-  void PlantaTecla(){
-  if (keyPressed){
-  textoOrdem = (textoOrdem + 1) % 3;  //alterna em tres estados= aparece o primeiro texto, o segundo texto e sem texto.
-  
-}
-}
+
+
 
 void quadrado() { // funcao da 'caixa de texto'
   if (textoOrdem > 0) {
-    fill(#FFFEFA); // cor do retãngulo
+    fill(#E9E8FA); // cor do retãngulo
     rect(0, 0, width / 1.8, height / 4); // parâmetros do retângulo
-    fill(#C368F5); // cor do texto (preto)
+    fill(#6921AA); // cor do texto 
     textFont(Puff); // fonte do texto
     if (textoOrdem == 1) {  //primeiro estado
        
@@ -43,7 +37,8 @@ void quadrado() { // funcao da 'caixa de texto'
     
   } else if (textoOrdem == 2) { //segundo estado
       text("As plantas precisam de energia luminosa do sol, de água presente no solo, e de carbono presente no ar para crescer. O ar é, em grande parte, constituído por nitrogênio, oxigênio e dióxido de carbono.", 10, 10, width / 2, height / 4);
-    }
+    
+  }
   }
 }
 
@@ -51,6 +46,8 @@ void gotinhas(int xgota, int ygota) {  //caracteristicas das gotinhas
   fill(#719FE5);  //cor das gotinhas
   ellipse(xgota, ygota+100, 10, 15);  //parametros das gotinhas
 }
+  
+  
   
   void ClickPlanta(){ 
 if (mousePressed){
@@ -65,12 +62,16 @@ if (mousePressed){
  }
   }
 if ((mouseX>0) && (mouseX<400) && (mouseY>0) && (mouseY<=200)){  //area da caixa de texto
+   if (videoPlanta == null){
+   configurarvideo();}}}
    
-   configurarvideo();
-  // BotaoPlantaVideo();
-   //videoteste.jump(0);
- }
-}}
+   if (videoPlanta != null) {
+   BotaoPlantaVideo();}
+
+
+  }
+
+
 
 void gotasgeral() {//cri as gotas aletoriamente quando clicar na nuvem// função
  { //parametros da nuvem. se o mouse cliclar na nuvem algo acontece
@@ -81,10 +82,11 @@ void gotasgeral() {//cri as gotas aletoriamente quando clicar na nuvem// funçã
   }
 }
 
+
 void BotaoPlantaMenu() {
   fill(#FFFFFF);  //cor 
   rect(100, 600, 200, 100, 20);  //retangulo do botão
-  fill(#5C61CB);  //cor da fonte
+  fill(#6921AA);  //cor da fonte
   textFont(Puff);  //fonte do texto
   textSize(40);  //tamanho da fonte
   if (mouseX > 150 && mouseX < 250 && mouseY > 600 && mouseY < 700) {  //area do botão 
@@ -97,13 +99,21 @@ void BotaoPlantaMenu() {
   text("VOLTAR", 120, 640);
   
   if (mousePressed) {
-    if (MouseClick(150, 250, 600, 700)) { 
-      videoteste.stop();
+    if (MouseClick(150, 250, 600, 700)) {
       planta = false;
       Menu = true;
+      tamflor = 200;
+      crescimentoflorY=500;
+      crescimentoflorX=420;
+      if (videoPlanta != null) {
+      videoPlanta.stop();
+      videoPlanta=null;
+      
   }
   }
-}
+}}
+
+
 
 void BotaoPlantaVideo(){
   fill(#FFFFFF);  //cor 
@@ -115,10 +125,10 @@ void BotaoPlantaVideo(){
 
     if (mousePressed) {
   if ((mouseX > 690) && (mouseX < 790) && (mouseY > 10) && (mouseY < 60)) {
-    if (videoteste.isPlaying()) {
-      videoteste.pause();  // pausa o vídeo se estiver tocando
+    if (videoPlanta.isPlaying()) {
+      videoPlanta.pause();  // pausa o vídeo se estiver tocando
     } else {
-      videoteste.play();   // toca o vídeo se estiver pausado
+      videoPlanta.play();   // toca o vídeo se estiver pausado
     }
   }
 }    

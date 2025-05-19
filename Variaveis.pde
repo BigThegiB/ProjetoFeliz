@@ -66,12 +66,10 @@ int textoOrdem = 0;//controla o que vai ser exibido no retangulo
 PImage img;//imagem da nuvem
 PImage img2;//imagem da flor
 
-Movie videoteste;
+Movie videoPlanta;
 int tamflor = 200;
 int xgota = 700; 
 int ygota = 200;
 boolean planta = false;
 int crescimentoflorY = 500;
 int crescimentoflorX = 420;
-
-
