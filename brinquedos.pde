@@ -10,6 +10,7 @@ void mostrar() {
 
 void mostrarVideo() {
   if (Reproduzindo && imagemSelecionada != -1) {
+    SomMenu.stop();
     background(fundo);
     image(videos[imagemSelecionada], 0, 150, 800, 400);
     brinquedos = false;
@@ -39,6 +40,7 @@ void escolherBrinquedo() {
       }
       imagemSelecionada = i;
       videos[i].loop();
+      videos[i].volume(0.4);
       Reproduzindo = true; 
     }
   }

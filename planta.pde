@@ -1,7 +1,7 @@
 
 
 void textoTemporario(){
-  fill(#4E1E6C);  //cor da fonte
+  fill(#5C61CB);  //cor da fonte
   textFont(Puff);  //fonte do texto
   textSize(20);  //tamanho da fonte
   textAlign(0,CENTER);
@@ -38,9 +38,9 @@ void desenharAsImagens(){
 
 void quadrado() { // funcao da 'caixa de texto'
   if (textoOrdem > 0) {
-    fill(#FEFCFF); // cor do retãngulo
+    fill(#FFFAFA); // cor do retãngulo
     rect(0, 0, width / 1.8, height / 3.5,20); // parâmetros do retângulo
-    fill(#6921AA); // cor do texto 
+    fill(#5C61CB); // cor do texto 
     textFont(Puff); // fonte do texto
     if (textoOrdem == 1) {  //primeiro estado
        
@@ -97,7 +97,7 @@ void gotasgeral() {//cri as gotas aletoriamente quando clicar na nuvem// funçã
 void BotaoPlantaMenu() {
   fill(#FFFFFF);  //cor 
   rect(100, 600, 150, 75, 20);  //retangulo do botão
-  fill(#6921AA);  //cor da fonte
+  fill(#5C61CB);  //cor da fonte
   textFont(Puff);  //fonte do texto
   textSize(25);  //tamanho da fonte
   if (mouseX > 150 && mouseX < 250 && mouseY > 600 && mouseY < 700) {  //area do botão 

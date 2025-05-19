@@ -95,7 +95,7 @@ void ReciclavelGameplay() {
   textFont(Puff);
   textAlign(LEFT);
   textSize(32);
-  fill(0, 0, 0); //Texto Settings
+  fill(#5C61CB); //Texto Settings
   text("Voltar", width*0.0125, height*0.04);
   if (!ReciclagemBGM.isPlaying()) {
     ReciclagemBGM.loop();

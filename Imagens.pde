@@ -26,6 +26,7 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   imgBotao2 = loadImage("imagem_botao2.png");
   imgBotao3 = loadImage("imagem_botao3.png");
   SomBotao = new SoundFile(this, "SomBotao.wav");
+  SomMenu = new SoundFile(this, "SomMenu.mp3");
 
   //------------
 

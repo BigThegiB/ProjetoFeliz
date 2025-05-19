@@ -7,7 +7,11 @@ void setup() {
   
 }
 void draw() {
+  
   if (Menu) {
+    if (!SomMenu.isPlaying()) {
+      SomMenu.loop();
+    }
     botoes();
     ClickMenu();
   }
