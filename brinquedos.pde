@@ -32,7 +32,8 @@ void escolherBrinquedo() {
     if (mouseX > posX[i] && mouseX < posX[i] + larguras[i] &&
       mouseY > posY[i] && mouseY < posY[i] + alturas[i]) {
       println("Imagem " + (i+1) + "!");
-      SomBotao.play();SomBotao.amp(0.5);
+      SomBotao.play();
+      SomBotao.amp(0.5);
       if (imagemSelecionada != -1) {
         videos[imagemSelecionada].stop();
       }
@@ -53,12 +54,14 @@ void AlturaLargura() {
 
 void texto() {
   textFont(Puff);
+  textSize(64);
   fill(#3C43BF);
   text("Vamos", PosicaoTextoX + 290, PosicaoTextoY + 300);
   text("montar um", PosicaoTextoX + 220, PosicaoTextoY + 400);
   text("brinquedo?", PosicaoTextoX + 230, PosicaoTextoY + 500);
   
   fill(#5C61CB);
+  textSize(64);
   text("Vamos", PosicaoTextoX + 293, PosicaoTextoY + 297);
   text("montar um", PosicaoTextoX + 223, PosicaoTextoY + 397);
   text("brinquedo?", PosicaoTextoX + 233, PosicaoTextoY + 497);
@@ -89,7 +92,8 @@ void BotaoBrinquedo() {
         Reproduzindo = false;
         videos[imagemSelecionada].stop();
       }
-      SomBotao.play();SomBotao.amp(0.5);
+      SomBotao.play();
+      SomBotao.amp(0.5);
       brinquedos = false;
       Menu = true;
     }
