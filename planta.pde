@@ -121,9 +121,10 @@ void BotaoPlantaVideo() {
   fill(#5C61CB);  //cor da fonte
   textFont(Puff);  //fonte do texto
   textSize(20);  //tamanho da fonte
-  text("Pausar",705, 30);
-
-  if (mousePressed) {
+    text("Pausar",705, 30);}
+    
+    
+void mousePressed() {
     if ((mouseX > 690) && (mouseX < 790) && (mouseY > 10) && (mouseY < 60)) {
       if (videoPlanta.isPlaying()) {
         videoPlanta.pause();  // pausa o vídeo se estiver tocando
@@ -132,7 +133,7 @@ void BotaoPlantaVideo() {
       }
     }
   }
-}
+
 
   
   
