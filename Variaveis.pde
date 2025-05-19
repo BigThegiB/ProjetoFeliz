@@ -55,7 +55,21 @@ int botaoAltura = 200;
 int botao2X, botao2Y;
 int botao3X, botao3Y;
 
-int espacamentoHorizontal = 50;
-int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
-int xInicial = 50;
-int yComumParaBotoes = 250;
+
+  int espacamentoHorizontal = 50; 
+  int larguraTotalBotoes = (botaoLargura * 3) + (espacamentoHorizontal * 2);
+  int xInicial = 50;
+  int yComumParaBotoes = 250;
+
+  //----------------------
+int textoOrdem = 0;//controla o que vai ser exibido no retangulo
+PImage img;//imagem da nuvem
+PImage img2;//imagem da flor
+
+Movie videoPlanta;
+int tamflor = 200;
+int xgota = 700; 
+int ygota = 200;
+boolean planta = false;
+int crescimentoflorY = 500;
+int crescimentoflorX = 420;

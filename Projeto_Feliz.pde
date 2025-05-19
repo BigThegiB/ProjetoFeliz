@@ -1,13 +1,17 @@
+
+
 void setup() {
   size(800, 800);
   TodasAdd(); // Favor não tirar
   CarregarImagens();
+  
 }
 void draw() {
-  if(Menu){  botoes();
- ClickMenu();}
-  
-  
+  if (Menu) {
+    botoes();
+    ClickMenu();
+  }
+
   if (brinquedos && !Reproduzindo) {
     Menu = false;
     brinquedo();
@@ -33,6 +37,17 @@ void draw() {
       Reciclagem1=false;
     }
   }
+
+  if (planta) {
+    Menu = false;
+    background(fundo);
+    desenharAsImagens();
+    quadrado();
+    ClickPlanta();
+    textodaPlanta();
+    BotaoPlantaMenu();
+    textoTemporario();
+  }
 }
 
 void mouseReleased() { // Função para detectar botão do mouse sendo solto, deixando aq caso alguem queira usar tb
@@ -42,4 +57,8 @@ void mouseReleased() { // Função para detectar botão do mouse sendo solto, de
   if (brinquedos) {
     escolherBrinquedo();
   }
+}
+
+  void keyPressed() { //fez-se necessario o uso entao nao tirar
+  textoOrdem = (textoOrdem + 1) % 3;  //alterna em tres estados = aparece o primeiro texto, o segundo texto e sem texto.
 }

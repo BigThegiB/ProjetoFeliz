@@ -10,9 +10,9 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   Incorrect = new SoundFile(this, "Incorrect.mp3");
   Victory = new SoundFile(this, "Victory.mp3");
   TestWin = loadImage("TestWin.png");
-  
+
   //------------
-  
+
   imagens[0] = loadImage("Img1.png");
   imagens[1] = loadImage("Img2.png");
   imagens[2] = loadImage("Img3.png");
@@ -26,9 +26,9 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
   imgBotao2 = loadImage("imagem_botao2.png");
   imgBotao3 = loadImage("imagem_botao3.png");
   SomBotao = new SoundFile(this, "SomBotao.wav");
-  
+
   //------------
-  
+
   botao1X = xInicial;
   botao1Y = yComumParaBotoes;
 
@@ -37,5 +37,10 @@ void CarregarImagens() { // Pra carregar coisa mais rápido, Imagem ou fonte qq 
 
   botao3X = botao2X + botaoLargura + espacamentoHorizontal;
   botao3Y = yComumParaBotoes;
+
   smooth();
+
+  img = loadImage("nuvenzinha.png");//carrega a imagem da nuvem
+  img2 = loadImage("florzinha.png");//carrega a imagem da flor
+  //videoteste = new Movie(this, "plantavideo.mp4"); // carrega o video
 }
