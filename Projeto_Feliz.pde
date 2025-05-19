@@ -4,6 +4,7 @@ void setup() {
   size(800, 800);
   TodasAdd(); // Favor não tirar
   CarregarImagens();
+  
 }
 void draw() {
   if (Menu) {
@@ -60,7 +61,7 @@ void draw() {
     ClickPlanta();
     textodaPlanta();
     BotaoPlantaMenu();
-    
+    textoTemporario();
   }
 }
 

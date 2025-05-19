@@ -1,6 +1,17 @@
 
-void configurarvideo(){
+
+void textoTemporario(){
+  fill(#4E1E6C);  //cor da fonte
+  textFont(Puff);  //fonte do texto
+  textSize(20);  //tamanho da fonte
+  textAlign(0,CENTER);
+  text("SIGA OS PASSOS:",100,360);
+  text("1-  Clique na nuvem",100,410);
+  text("2- Aperte qualquer tecla",100,460);
+  text("3- CLique na caixa de texto",100,510);
   
+}
+void configurarvideo(){
   videoPlanta = new Movie(this, "plantavideo.mp4");   // carrega o video
   videoPlanta.loop();   // repete o vídeo em loop
    
@@ -27,13 +38,13 @@ void desenharAsImagens(){
 
 void quadrado() { // funcao da 'caixa de texto'
   if (textoOrdem > 0) {
-    fill(#E9E8FA); // cor do retãngulo
-    rect(0, 0, width / 1.8, height / 4); // parâmetros do retângulo
+    fill(#FEFCFF); // cor do retãngulo
+    rect(0, 0, width / 1.8, height / 3.5,20); // parâmetros do retângulo
     fill(#6921AA); // cor do texto 
     textFont(Puff); // fonte do texto
     if (textoOrdem == 1) {  //primeiro estado
        
-      text("São responsáveis pela geração de oxigênio através do processo de fotossíntese, que é vital para a sobrevivência de muitos organismos, inclusive do homem. Além disso, as plantas servem como fonte primária de alimento para herbívoros, formando a base da cadeia alimentar na maioria dos ecossistemas.", 10, 10, width / 2, height / 4);
+      text("As plantas são responsáveis pela geração de oxigênio através do processo de fotossíntese, que é vital para a sobrevivência de muitos organismos, inclusive do homem. Além disso, as plantas servem como fonte primária de alimento para herbívoros, formando a base da cadeia alimentar na maioria dos ecossistemas.", 10, 10, width / 2, height / 4);
     
   } else if (textoOrdem == 2) { //segundo estado
       text("As plantas precisam de energia luminosa do sol, de água presente no solo, e de carbono presente no ar para crescer. O ar é, em grande parte, constituído por nitrogênio, oxigênio e dióxido de carbono.", 10, 10, width / 2, height / 4);
@@ -85,10 +96,10 @@ void gotasgeral() {//cri as gotas aletoriamente quando clicar na nuvem// funçã
 
 void BotaoPlantaMenu() {
   fill(#FFFFFF);  //cor 
-  rect(100, 600, 200, 100, 20);  //retangulo do botão
+  rect(100, 600, 150, 75, 20);  //retangulo do botão
   fill(#6921AA);  //cor da fonte
   textFont(Puff);  //fonte do texto
-  textSize(40);  //tamanho da fonte
+  textSize(25);  //tamanho da fonte
   if (mouseX > 150 && mouseX < 250 && mouseY > 600 && mouseY < 700) {  //area do botão 
     strokeWeight(3); //lagura da borda //(se o mouse fica em cima do botão a cor da borda foca mais forte)
     stroke(corBordaBotaoHover);
@@ -96,7 +107,7 @@ void BotaoPlantaMenu() {
     strokeWeight(1); 
     stroke(corBordaBotao);
   }
-  text("VOLTAR", 120, 640);
+  text("VOLTAR", 125, 625);
   
   if (mousePressed) {
     if (MouseClick(150, 250, 600, 700)) {
